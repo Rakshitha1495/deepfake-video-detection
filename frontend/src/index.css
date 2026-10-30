@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-abyss font-sans text-ink antialiased;
+  background-image:
+    radial-gradient(60rem 40rem at 85% -10%, rgba(155, 123, 240, 0.10), transparent 60%),
+    radial-gradient(50rem 30rem at -10% 110%, rgba(63, 208, 224, 0.07), transparent 60%);
+  background-attachment: fixed;
+  font-feature-settings: "tnum" 1;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-display tracking-tight;
+}
+
+:focus-visible {
+  outline: 2px solid #3fd0e0;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@layer components {
+  .panel {
+    @apply rounded-2xl border border-rule bg-hull/80 shadow-lift backdrop-blur-sm;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-signal px-5 py-2.5 font-medium text-abyss transition hover:bg-[#6ADDE9] disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-rule px-4 py-2 text-sm text-ink transition hover:border-haze/60 hover:bg-deck disabled:opacity-50;
+  }
+  .label {
+    @apply text-sm text-haze;
+  }
+}
+
+/* The scanning line used while a video is being analysed */
+@keyframes scan {
+  0% { transform: translateY(-10%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(1000%); opacity: 0; }
+}
+.scanline {
+  animation: scan 2.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scanline { animation: none; opacity: 0.6; }
+  * { transition: none !important; }
+}
