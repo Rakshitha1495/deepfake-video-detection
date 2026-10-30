@@ -1,0 +1,66 @@
+{
+  "split": "test",
+  "num_test_videos": 18,
+  "class_distribution": {
+    "real": 8,
+    "fake": 10,
+    "total": 18
+  },
+  "metrics": {
+    "num_samples": 18,
+    "accuracy": 0.6111111111111112,
+    "precision": 0.5882352941176471,
+    "recall": 1.0,
+    "f1": 0.7407407407407407,
+    "roc_auc": 0.7000000000000001,
+    "roc_auc_note": null,
+    "average_precision": 0.7281593406593406,
+    "confusion_matrix": [
+      [
+        1,
+        7
+      ],
+      [
+        0,
+        10
+      ]
+    ],
+    "classification_report": {
+      "REAL": {
+        "precision": 1.0,
+        "recall": 0.125,
+        "f1-score": 0.2222222222222222,
+        "support": 8.0
+      },
+      "FAKE": {
+        "precision": 0.5882352941176471,
+        "recall": 1.0,
+        "f1-score": 0.7407407407407407,
+        "support": 10.0
+      },
+      "accuracy": 0.6111111111111112,
+      "macro avg": {
+        "precision": 0.7941176470588236,
+        "recall": 0.5625,
+        "f1-score": 0.48148148148148145,
+        "support": 18.0
+      },
+      "weighted avg": {
+        "precision": 0.7712418300653595,
+        "recall": 0.6111111111111112,
+        "f1-score": 0.5102880658436213,
+        "support": 18.0
+      }
+    },
+    "classification_report_str": "              precision    recall  f1-score   support\n\n        REAL       1.00      0.12      0.22         8\n        FAKE       0.59      1.00      0.74        10\n\n    accuracy                           0.61        18\n   macro avg       0.79      0.56      0.48        18\nweighted avg       0.77      0.61      0.51        18\n"
+  },
+  "meaningful": true,
+  "warnings": [],
+  "failed_videos": [],
+  "num_frames": 8,
+  "best_epoch": 10,
+  "best_val_f1": 0.6956521739130435,
+  "best_val_score": 0.5738,
+  "evaluation_seconds": 2.441,
+  "evaluated_at": "2026-10-30T15:31:55.048006+00:00"
+}

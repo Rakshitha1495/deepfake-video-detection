@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.env
+
+# Data, caches and trained weights (large / personal)
+dataset/raw/real/*
+dataset/raw/fake/*
+!dataset/raw/real/.gitkeep
+!dataset/raw/fake/.gitkeep
+.cache/
+models/*.pt
+models/*.tmp
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
